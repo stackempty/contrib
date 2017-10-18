@@ -3,17 +3,23 @@ docker_config_dir: "/etc/sysconfig"
 
 # Set source of docker binaries
 # Available: package-manager, distribution-rpm, custom-repository
-docker_source_type: "package-manager"
+docker_source_type: "distribution-rpm"
 docker_package_name: "docker"
 
 docker_repository_baseurl: https://yum.dockerproject.org/repo/main/centos/$releasever/
 docker_repository_gpgkey: https://yum.dockerproject.org/gpg
 
 # The URL do download distribution rpms shipping docker binaries from
-docker_rpm_url_base: https://kojipkgs.fedoraproject.org//packages/docker/1.10.3/41.git78aa320.fc23/x86_64
-docker_rpm_url_sufix: 1.10.3-41.git78aa320.fc23.x86_64.rpm
+# docker_rpm_url_base: https://kojipkgs.fedoraproject.org//packages/docker/1.10.3/41.git78aa320.fc23/x86_64
+# docker_rpm_url_sufix: 1.10.3-41.git78aa320.fc23.x86_64.rpm
+
+docker_rpm_url_base: https://yum.dockerproject.org/repo/main/fedora/25/Packages
+docker_rpm_url_sufix:
 
 docker_rpms:
-- docker-selinux
-- docker-forward-journald
-- docker
+# - docker-selinux
+# - docker-forward-journald
+# - docker
+
+- docker-engine-17.05.0.ce-1.fc25.x86_64.rpm
+- docker-engine-selinux-17.05.0.ce-1.fc25.noarch.rpm

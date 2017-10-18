@@ -41,6 +41,7 @@ kube_apiserver_options:
   - "--service-account-key-file={{ kube_cert_dir }}/server.crt"
   - "--bind-address={{ kube_apiserver_bind_address }}"
   - "--apiserver-count={{ groups['masters']|length }}"
+  - "--storage-backend=etcd2"
 
 kube_controller_manager_options:
   - "--kubeconfig={{ kube_config_dir }}/controller-manager.kubeconfig"

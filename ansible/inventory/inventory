@@ -1,0 +1,12 @@
+[masters]
+# localhost ansible_connection=local
+fedora-2gb-los1-01
+
+[etcd]
+# localhost ansible_connection=local
+fedora-2gb-los1-01
+
+[nodes]
+# localhost ansible_connection=local
+fedora-2gb-los1-02
+fedora-2gb-los1-03
